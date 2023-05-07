@@ -8,6 +8,8 @@ class Book:
 
     def get_page_count(self):
         return self._page_count
+    # underscore is for Private: in this instance, it's only used to differient from page_count
+    # getter and setter functions don't support the reassigment of page_count
 
     def set_page_count(self, page_count):
         if type(page_count) == (int):
@@ -16,6 +18,7 @@ class Book:
             print("page_count must be an integer")
     
     page_count = property(get_page_count, set_page_count)
+    # page_count is managed by other functions
 
     def turn_page(self):
         print("Flipping the page...wow, you read fast!")

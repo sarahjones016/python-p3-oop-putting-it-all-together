@@ -4,6 +4,7 @@ class Shoe:
     def __init__(self, brand, size=0):
         self.brand = brand
         self.size = size
+        self.condition = "Used"
 
     def get_size(self):
         return self._size
